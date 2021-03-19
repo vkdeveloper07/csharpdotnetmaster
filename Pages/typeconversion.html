@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Type Conversion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is Type conversion</h2>
+        </div>
+        <p>
+            Type conversion means converting value of one datatype to another datatype.If the two datatypes are compatible,
+            c# automatically converts the value of data types. If two datatypes are not comparible, you have to externally specify
+            the data type manually. This is called type casting.
+        </p>
+
+        <div class="well">
+            <h2>Types of Type conversion</h2>
+        </div>
+        <p>There are basically two ways in which we can convert values between data types.</p>
+        <ul>
+            <li>Implicit Type conversion - happens when two data types are compatible. So compiler automatic does the type conversion.</li>
+            <li>Explicit Type conversion - when do data types are not compatible , so you need to manually convert the types.</li>
+        </ul>
+        <h3>Implicit type conversion</h3>
+        <p>
+            C# compiler can handle implicit type conversion between numberic data types. For ex- we can assign byte value
+            to short, int, long, float and double as the size of these data types are larger than byte, so compiler can automatically
+            convert the value without truncating the value. <br />
+            The following list shown the what data types conversions can be done implicitly.
+        </p>
+        <p>
+            <code>
+                Byte -> Short -> int -> long -> float ->double <br />
+                char -> int -> long -> float ->double<br />
+                Short -> int -> long -> float ->double<br />
+                int -> long -> float ->double<br />
+                long -> float ->double<br />
+                float ->double<br />
+            </code>
+        </p>
+        <h3>Explicit type conversion</h3>
+        <p>
+            When two data types are not compatible, the compiler wants you to explicitly specify the type in which to convert
+            the value. This is known as cast.
+            For ex- if you try to convert double value to int, without explicitly specifying, the compiler will throw an error.
+            <br />
+            To convert explicitly, specify the data type. <br />
+            For ex-  <br />
+            <code>
+                double d=123.4 <br />
+                int i=(int)d; <br />
+                <cmt>output - 123</cmt>
+            </code>
+        </p>
+        <div class="well">
+            <h2>Inbuilt methods for type conversion</h2>
+        </div>
+        <p>
+            C# provides several inbuilt methods for explicit type conversion. Following table showns the list of methods.
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Method Name</th>
+                    <th>Method Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ToBoolean()</td>
+                    <td>Covnerts to boolean value</td>
+                </tr>
+                <tr>
+                    <td>ToByte()</td>
+                    <td>Covnerts to byte value</td>
+                </tr>
+                <tr>
+                    <td>ToChar()</td>
+                    <td>Covnerts to char value</td>
+                </tr>
+                <tr>
+                    <td>ToDateTime()</td>
+                    <td>Covnerts to datetime value</td>
+                </tr>
+                <tr>
+                    <td>ToDecimal()</td>
+                    <td>Covnerts to decimal value</td>
+                </tr>
+                <tr>
+                    <td>ToDouble()</td>
+                    <td>Covnerts to double value</td>
+                </tr>
+                <tr>
+                    <td>ToInt16()</td>
+                    <td>Covnerts to short value</td>
+                </tr>
+                <tr>
+                    <td>ToInt64()</td>
+                    <td>Covnerts to long value</td>
+                </tr>
+                <tr>
+                    <td>ToString()</td>
+                    <td>Covnerts to string value</td>
+                </tr>
+                <tr>
+                    <td>ToUInt16()</td>
+                    <td>Covnerts to unsigned int value</td>
+                </tr>
+                <tr>
+                    <td>ToUInt32()</td>
+                    <td>Covnerts to unsigned long value</td>
+                </tr>
+                <tr>
+                    <td>ToUInt64()</td>
+                    <td>Covnerts to unsigned 64 bit int value</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

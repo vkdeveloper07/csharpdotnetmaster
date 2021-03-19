@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Files I/O in C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <style>
+        b {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Working with Files in C#</h2>
+        </div>
+        <p>
+            A file is a collection of data with specific extension stored on a disk.
+            C# provides many classes to work with files. In this module, we will look at some of the important file Classes
+            in provided by C#.
+        </p>
+
+        <div class="well">
+            <h2>File Classes</h2>
+        </div>
+
+        <h3>FileStream</h3>
+        <p>
+            FileStream class provides the methods and properties to read and write data into the files.<br />
+            <b>Constructor</b> <br />
+            <code>
+                FileStream fs=new FileStream("path",FileMode,FileAccess);
+            </code><br />
+            <b>Example</b><br />
+            <code>
+                FileStream fs=new FileStream("test.txt",FileMode.Open,FileAcess.ReadWrite);
+            </code><br /><br />
+            Below table contains the important methods of FileStream class.
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>WriteByte(byte)</td>
+                    <td>Writes the byte to the current position in file.</td>
+                </tr>
+                <tr>
+                    <td>ReadByte()</td>
+                    <td>Reades the byte to the from file.</td>
+                </tr>
+                <tr>
+                    <td>Close()</td>
+                    <td>Closes the current stream and release the resources.</td>
+                </tr>
+                <tr>
+                    <td>Dispose()</td>
+                    <td>release the resources used by stream.</td>
+                </tr>
+                <tr>
+                    <td>Flush()</td>
+                    <td>clears the buffer for the stream and write any buffered data to file.</td>
+                </tr>
+                <tr>
+                    <td>Read(Byte[],int32,int32)</td>
+                    <td>Reads the block of byte array and write data to buffer stream.</td>
+                </tr>
+                <tr>
+                    <td>SetLength(int64)</td>
+                    <td>Set the length of stream to given value.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <b>Program</b> <br />
+        <div class="programcode" style="width:1000px;">
+            <p>
+                <code>
+                    class Program <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp; void Main(string[] args)<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileStream stream = new FileStream("test.dat",FileMode.OpenOrCreate,FileAccess.ReadWrite);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 1; i <=10; i++)<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stream.WriteByte((byte)i);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <h3>File</h3>
+        <p>
+            The File is a static class which provides methods and properties to perform operations on physical files.
+            <br />
+            Below table contains the important methods in file class.
+        </p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Create</td>
+                    <td>Creates a file or overrides existing file</td>
+                </tr>
+                <tr>
+                    <td>Delete</td>
+                    <td>Deletes a file</td>
+                </tr>
+                <tr>
+                    <td>Exists</td>
+                    <td>Check if files exists or not</td>
+                </tr>
+                <tr>
+                    <td>Move</td>
+                    <td>Moves the file to specified location with new file name</td>
+                </tr>
+                <tr>
+                    <td>Open</td>
+                    <td>Opens the file for read and write and returns the filestream object</td>
+                </tr>
+                <tr>
+                    <td>ReadAllText</td>
+                    <td>Opens the file and read all the lines and closes the file</td>
+                </tr>
+                <tr>
+                    <td>ReadAllLines</td>
+                    <td>Opens the file and read all the lines and closes the file</td>
+                </tr>
+                <tr>
+                    <td>ReadAllBytes</td>
+                    <td>Opens the file and read the content into byte array and closes the file</td>
+                </tr>
+                <tr>
+                    <td>WriteAllBytes</td>
+                    <td>Create new file and write the byte array into file and closes. If existing file is there , it is overwritten</td>
+                </tr>
+                <tr>
+                    <td>WriteAllLines</td>
+                    <td>Create new file and write the byte array into file and closes. If existing file is there , it is overwritten</td>
+                </tr>
+                <tr>
+                    <td>WriteAllBytes</td>
+                    <td>Create new file and write the strings into file and closes.</td>
+                </tr>
+                <tr>
+                    <td>WriteAllText</td>
+                    <td>Create new file and write the strings into file and closes. If existing file is there , it is overwritten</td>
+                </tr>
+            </tbody>
+        </table>
+        <b>Program</b> <br />
+
+        <div class="programcode">
+            <p>
+                <code>
+                    class Program<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;static void Main(string[] args)<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (File.Exists("text.txt"))<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("File exists.");<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("File does not exists.");<br />
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+
+        <h3>StreamReader</h3>
+        <p>StreamReader class contains methods to read characters from byte stream.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Close</td>
+                    <td>Closes the streamreader object</td>
+                </tr>
+                <tr>
+                    <td>Dispose</td>
+                    <td>Closes the streamreader and releases the resources</td>
+                </tr>
+                <tr>
+                    <td>Read</td>
+                    <td>Reads the next characters from input stream</td>
+                </tr>
+                <tr>
+                    <td>ReadLine</td>
+                    <td>Reads the line of characters from input stream</td>
+                </tr>
+                <tr>
+                    <td>ReadToEnd</td>
+                    <td>Reads all characters from the current position to the end of stream</td>
+                </tr>
+                <tr>
+                    <td>Peek</td>
+                    <td>Returns the next character from stream</td>
+                </tr>
+            </tbody>
+        </table>
+        <b>Program</b> <br />
+
+        <div class="programcode" style="width:800px;">
+            <p>
+                <code>
+                    class Program <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;static void Main(string[] args)<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StreamReader streamReader = new StreamReader("text.txt");<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string line;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ((line=streamReader.ReadLine())!=null)<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(line);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <h3>StreamWriter</h3>
+        <p>StreamWriter class contains methods which are used to write characters to stream.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Methods</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Close</td>
+                    <td>Closes the streamwriter object</td>
+                </tr>
+                <tr>
+                    <td>Dispose</td>
+                    <td>writes the buffer data to stream and closes the streamwriter and releases the resources</td>
+                </tr>
+                <tr>
+                    <td>Flush</td>
+                    <td>Clears the buffer for writer and write buffered data to stream</td>
+                </tr>
+                <tr>
+                    <td>Write</td>
+                    <td>write data to stream</td>
+                </tr>
+                <tr>
+                    <td>WriteLine</td>
+                    <td>Write formatted data to stream</td>
+                </tr>
+            </tbody>
+        </table>
+        <b>Program</b> <br />
+
+        <div class="programcode" style="width:800px;">
+            <p>
+                <code>
+                    class Program <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;static void Main(string[] args)<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StreamWriter streamWriter = new StreamWriter("test.txt");<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;streamWriter.WriteLine("This is test");<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;streamWriter.Dispose();<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

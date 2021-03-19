@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Classes In C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is a Class</h2>
+        </div>
+        <p>
+            A class is like a blueprint. Let's take real world example. There are many types of cars like Audi,Mercedese etc.
+            So we can say a car is a class and Audi,Mercedese are object of the car.A car can have many properties like color,
+            speed,shape etc. So the Audi which is object of the car has all of these properties.
+        </p>
+        <p>
+            Similarly in object oriented programming we can create a class which contains properties like methods,fields,
+            constructors,events ,delegates etc.
+        </p>
+        <div class="well">
+            <h2>Example</h2>
+        </div>
+        <div class="programimagediv">
+            <img src="../Images/Programs/whatisclass.JPG" alt="whatisclass" class="img-rounded" />
+        </div>
+        <h3>Explaination</h3>
+        <p>
+            The class is declared with a keyword <i>class</i> prefixing with access modifiers like public,private or protected etc.
+            Learn about access modifiers <a href="#">here</a> <code>int i=0</code>is a variable.
+            <code>public int ID {get;set;}</code> is a auto implemented property.You can learn about properties in
+            <a href="#">here</a>.<code>public Test(){}</code>is a constructor. And <code>public void show(){}</code>
+            is a method. Let's understand in detail.
+        </p><br />
+        <ol>
+            <li>
+                <h3>Constructor</h3>- The name of constructor is same as class name. When the object of class is created, the
+                constructor is called automatically. We can write some code in constructor which is required to execute
+                when instance of class is created.
+                <br /><br />
+                <div class="programcode">
+                    <code>
+                        public Test()<br />
+                        {<br />
+                        &nbsp;&nbsp;&nbsp;some code statements      <br />
+                        }<br />
+                    </code>
+                </div>
+            </li>
+            <li>
+                <h3>Methods</h3> We can define methods in class with the syntax
+                <i>{access modifier return type method name(parameters)}</i> <br /><br />
+                <div class="programcode">
+                    <code>
+                        public void Show(int id)<br />
+                        {<br />
+                        &nbsp;&nbsp;&nbsp;some code statements      <br />
+                        }<br />
+
+                    </code>
+                </div>
+            </li>
+            <li>
+                <h3>Properties</h3> We can define properties in c# with getter and setter accessors.<br /><br />
+                <div class="programcode">
+                    <code>
+                        <br />
+                        private int id; <br /> <br />
+                        <br />
+                        public int Property1  <br />
+                        {<br />
+                        &nbsp;&nbsp;&nbsp;get{return id;} <br />
+                        &nbsp;&nbsp;&nbsp;set{id=value;} <br />
+                        }<br />
+                        <br />
+                    </code>
+                </div><br /><br />
+                <p>
+                    From c# 3.0 , we can implement properties without any custom code in get and set accessors.
+                    These are callled auto implemented properties.
+                </p><br />
+                <div class="programcode">
+                    <code>
+                        public int MyProperty {get;set;}
+                    </code>
+                </div>
+            </li>
+            <li>
+                <h3>NameSpace</h3> A Namespace is collection of classes. It is like a container for set of class.
+                namespace also provides uniq name for classes. <i>namespacename.classname</i><br /><br />
+                <div class="programcode">
+                    <code>
+                        <br />
+                        namespace CsharpTutorials<br />
+                        { <br />
+                        &nbsp;&nbsp;&nbsp;class Test<br />
+                        &nbsp;&nbsp;&nbsp;{<br />
+                        &nbsp;&nbsp;&nbsp;}<br />
+                        } <br />
+                      
+                    </code>
+                </div>
+            </li>
+
+        </ol>
+
+    </div>
+</body>
+</html>

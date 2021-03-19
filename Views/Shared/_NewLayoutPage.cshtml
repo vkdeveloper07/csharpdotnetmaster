@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - csharpdotnetmaster</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+  
+    <style>
+        .container-fluid {
+            height: 500px;
+            background-image: url('../../Images/program_1.jpg');
+            background-size:cover;
+            background-position:center;
+            opacity:0.5;
+            max-width:100%;
+            text-align:center;
+            padding:10px;
+            
+        }
+        #Title {
+            padding-top: 200px;
+            color:aliceblue;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:8vw;
+        }
+        ul li{
+            font-family:Calibri;
+            font-size:large;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    @Html.Partial("~/Views/Shared/_HeaderMenu.cshtml")
+    <div class="container-fluid bg-primary">
+        <h2 id="Title">CsharpDotnetMaster</h2>
+
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

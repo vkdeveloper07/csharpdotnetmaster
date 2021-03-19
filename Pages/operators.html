@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Operators in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Operators in c#</h2>
+        </div>
+        <p>
+            Operators in C# are special symbols that perform special type of operation on operands.For example,
+            <code> int i=2;</code> So <q>=</q> is an assignment operator which assigns value 2 to variable i. Let's discuss the
+            operators in detail.
+        </p>
+        <div class="well">
+            <h2>Types of operators</h2>
+        </div>
+        <p>There are basically two types of operators in C#. Unary and binary operators.</p>
+        <ul>
+            <li>
+                Unary operators- Unary operators operate upon single operand. For ex-
+                <code>int i=8;Console.WriteLine(+i)</code> Here '+' is a unary operator applied to 'i' returning its value.
+            </li>
+            <li>
+                Binary operators- Binary operators operate open two operands. For ex-
+                <code>int a=2,b=4; Console.WriteLine(a+b);</code> Here binary '+' performs the addition of value of variables
+                'a' and 'b' and prints on console.
+            </li>
+        </ul>
+        <div class="well">
+            <h2>Categories of operators</h2>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Operator Symbol</th>
+                    <th>Operator Name</th>
+                    <th>Operator Description</th>
+                    <th>Operator Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Arithmatic Operators</b></td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Addition operator</td>
+                    <td>Performs the addition operation on operands</td>
+                    <td>int i=2+2</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction operator</td>
+                    <td>Performs the subtraction operation on operands</td>
+                    <td>int i=8+2</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication operator</td>
+                    <td>Performs the multiplication operation on operands</td>
+                    <td>int i=2*2</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division operator</td>
+                    <td>Performs the division operation on operands</td>
+                    <td>int i=10/2</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus operator</td>
+                    <td>Calculates reminder of operands</td>
+                    <td>int i=11%2</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Unary Arithmatic Operators</b></td>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Unary plus operator</td>
+                    <td>Returns the value of operand</td>
+                    <td>+10</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Unary minus operator</td>
+                    <td>Returns the negation of operand</td>
+                    <td>-10</td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td>Unary increment operator</td>
+                    <td>Increases the value of operand by 1</td>
+                    <td>a++</td>
+                </tr>
+                <tr>
+                    <td>--</td>
+                    <td>Unary decrement operator</td>
+                    <td>Decreases the value of operand by 1</td>
+                    <td>a--</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>Unary negation operator</td>
+                    <td>Inverts the value of operand</td>
+                    <td>!a</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Assignment Operators</b></td>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>Assignment operator</td>
+                    <td>Assigns the value to a variable</td>
+                    <td>a=5</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Relational Operators</b></td>
+                </tr>
+                <tr>
+                    <td><</td>
+                    <td>less than operator</td>
+                    <td>Checks if left operand is less than right operand</td>
+                    <td>a < b</td>
+                </tr>
+                <tr>
+                    <td>></td>
+                    <td>greater than operator</td>
+                    <td>Checks if left operand is greater than right operand</td>
+                    <td>a > b</td>
+                </tr>
+                <tr>
+                    <td><=</td>
+                    <td>less than or equal to operator</td>
+                    <td>Checks if left operand is less than or equal to right operand</td>
+                    <td>a <= b</td>
+                </tr>
+                <tr>
+                    <td>>=</td>
+                    <td>greater than or equal to operator</td>
+                    <td>Checks if left operand is greater than or equal to right operand</td>
+                    <td>a <= b</td>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>equals to operator</td>
+                    <td>Checks if left operand is equal to the right operand</td>
+                    <td>a == b</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>not equals to operator</td>
+                    <td>Checks if left operand is not equal to the right operand</td>
+                    <td>a != b</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Boolean logical Operators</b></td>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>Boolean AND operator</td>
+                    <td>Returns true if both operands are true</td>
+                    <td>a && b</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>Boolean OR operator</td>
+                    <td>Returns true if any of the operands are true</td>
+                    <td>a || b</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Bitwise Operators</b></td>
+                </tr>
+                <tr>
+                    <td>|</td>
+                    <td>Bitwise OR operator</td>
+                    <td>Performs OR operation on bits</td>
+                    <td>a | b</td>
+                </tr>
+                <tr>
+                    <td>&</td>
+                    <td>Bitwise AND operator</td>
+                    <td>Performs AND operation on bits</td>
+                    <td>a & b</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>Bitwise Exclusive OR operator</td>
+                    <td>Performs exclusive OR operation on bits</td>
+                    <td>a ^ b</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Bitwise NOT operator</td>
+                    <td>Performs NOT operation on bits</td>
+                    <td>~b</td>
+                </tr>
+                <tr>
+                    <td><<</td>
+                    <td>Bitwise left shift operator</td>
+                    <td>Shifts the bits to the left</td>
+                    <td>a << b</td>
+                </tr>
+                <tr>
+                    <td>>></td>
+                    <td>Bitwise right shift operator</td>
+                    <td>Shifts the bits to the right</td>
+                    <td>a >> b</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="bg-info" style="text-align:center;"><b>Compound assignment Operators</b></td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>Addition Assignment operator</td>
+                    <td>Adds the left and right operand and stored value in left operand</td>
+                    <td>a += b (a=a+b)</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Subtraction Assignment operator</td>
+                    <td>subtracts the left and right operand and stored value in left operand</td>
+                    <td>a -= b (a=a-b)</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiplication Assignment operator</td>
+                    <td>Multiply the left and right operand and stored value in left operand</td>
+                    <td>a *= b (a=a*b)</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Division Assignment operator</td>
+                    <td>Divide the left and right operand and stored value in left operand</td>
+                    <td>a /= b (a=a/b)</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>Modulus Assignment operator</td>
+                    <td>Calculate reminder of division of the left and right operand and stored value in left operand</td>
+                    <td>a %= b (a=a%b)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Learn more about operators
+            <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/" target="_blank">Here.</a>
+        </p>
+    </div>
+</body>
+</html>

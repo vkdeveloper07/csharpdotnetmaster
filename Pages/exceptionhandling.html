@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Exception handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <style>
+        b {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is an exception</h2>
+        </div>
+        <p>
+            An exception is a problem that prevents a program from executing successfully. When an exception occures, the
+            program crashes and execution is halted. <br />
+
+        </p>
+        <div class="well">
+            <h2>Exceptions handling </h2>
+        </div>
+        <p>
+            The exceptions must be handled properly to avoid program crashing. C# provides built in mechanism to handle
+            the exception. <br />
+
+            We can use the built in keywords try, catch and finally to handle the exception occured in program.
+        </p>
+        <h3>
+            Syntax
+        </h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    try <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//code in which exception can occur</cmt><br />
+                    } <br />
+                    catch(Exception e) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//code to handle the exception</cmt><br />
+                    } <br />
+                    finally <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//final code to execute</cmt><br />
+                    } <br />
+                </code>
+            </p>
+        </div>
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    try <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;int i=10/0;<br />
+                    } <br />
+                    catch(Exception e) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(e.Message);<br />
+                    } <br />
+                    finally <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine("Error catched");<br />
+                    } <br />
+                </code>
+            </p>
+        </div>
+        <h3>Explanation</h3>
+        <b>Try</b>
+        <p>
+            In try block , we write the code in which exception can occur.When the error occures , the program control
+            is thrown to first matching catch block.
+        </p>
+        <b>catch</b>
+        <p>In catch block , we handle the error that was thrown from the catch block.</p>
+        <b>finally</b>
+        <p>
+            The finally block is executed despite exception is raised on not. We can write the code to clear up resources
+            and memory space in finally block. finally block is optional.
+        </p>
+
+        <div class="well">
+            <h2>Multiple catch block</h2>
+        </div>
+        <p>
+            A try catch can have multiple catch blocks.The first catch block which matches the exception thrown by try block
+            will be executed.
+        </p>
+        <div class="programcode">
+            <p>
+                <code>
+                    try <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;int i=10/0;<br />
+                    } <br />
+                    catch(DivideByZeroException e) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(e.Message);<br />
+                    } <br />
+                    catch(Exception e) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(e.Message);<br />
+                    } <br />
+                    finally <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine("Error catched");<br />
+                    } <br />
+                </code>
+            </p>
+        </div>
+        <p>
+            In above program, the first catch block is executed with DivideByZeroException and prints the exception on console.
+            <br />
+            Please note , we cannot declare multiple catch block with the same exception type specified. The catch block with
+            exception type <b>Exception</b> must be last catch block.
+        </p>
+        <div class="well">
+            <h2>Nested try catch </h2>
+        </div>
+        <p>C# allows nested of try..catch block. i.e try..catch inside another try..catch</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    try <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;try <br />
+                    &nbsp;&nbsp;&nbsp;{ <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i=10/0;<br />
+                    &nbsp;&nbsp;&nbsp;} <br />
+                    &nbsp;&nbsp;&nbsp;catch(DivideByZeroException e) <br />
+                    &nbsp;&nbsp;&nbsp;{ <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(e.Message);<br />
+                    &nbsp;&nbsp;&nbsp;} <br />
+                    } <br />
+                    catch(Exception e) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(e.Message);<br />
+                    } <br />
+                    finally <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine("Error catched");<br />
+                    } <br />
+                </code>
+            </p>
+        </div>
+        <p>In above program, the try..catch block is in outer try block. It throws and catches the exception and
+        prints the message on the console.</p>
+    </div><br />
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction To .NET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Introduction To .NET</h2>
+        </div>
+        <p>
+            .NET is software development framework developed by Microsoft. It runs primarily on Microsoft Windows. It is a collection
+            of large class library which provides services like interoperability. .NET framework can be used to develop both windows
+            based on web based applications.We can also use .NET framework to develop applications in various programming languages
+            like c#,F# Visual Basic etc.
+        </p>
+
+        <div class="well">
+            <h2>.NET framework componants</h2>
+        </div>
+        <h3>1.Common language runtime -</h3>
+        <p>
+            The Common Language Runtime (CLR) is a execution environment for programs written
+            using .NET framework.The CLR provides many services like memory managment,garbage collection,type safety,exception
+            handling and Thread managment. The programs written using .NET framework are compiled by CLR instead of directly
+            compiled into machine code.During execution of programs, the Just In Time (JIT) compiler converts CLR code into machine code.
+        </p>
+        <h3>2. CLass Library-</h3>
+        <p>
+            The .NET framework also includes the set of class libraries.Class library is a set of functions and methods
+            that can be used in programs written using .NET framewok. These methods are collected into various namespaces
+            like System, System.Threading,System.IO etc. These namespaces can be used in programs with <q>using</q> keyword
+            For ex- <code>using System;</code>
+        </p>
+        <h3>3. Types of applications-</h3>
+        <ul>
+            <li>
+                WinForms- .NET framework can be used for developing Windows based application. These types of applications
+                runs on windows machine only. For ex- Notepad
+            </li>
+            <br />
+            <li>
+                Asp.NET- These types of applications are web based applications. These application are run with the help of
+                browsers.In web based applications , the Client-Server architecture is followed. The program runs on server
+                for ex- IIS server and the client machine connect with server and request for specific files or content. The
+                server serves the requested content to those clients.
+            </li>
+            <br />
+            <li>
+                ADO.NET- The aplications often needs to store user data or any other data in database. This technology is
+                used to interact with the database. The programs can use ADO.NET to connect and store data to databases like
+                Microsoft SQL server , Oracle, MSSQL etc
+            </li>
+        </ul>
+        <div class="well">
+            <h2>.NET Design Principle</h2>
+        </div>
+        <ul>
+            <li>
+                Interoperability- This is very important design principle of .NET. The applications developed on various
+                version of .NET are compatible to each other. Also the programs developed on different platform are also accessible
+                to .NET with the help of namespaces <code>System.Runtime.InteropServices</code> and <code>System.EnterpriseServices</code>
+            </li><br />
+            <li>Portability- Earlier with .NET framework the application written in .NET were available to Microsoft Windows
+            only. But with the development of .NET core the applicatios will be available to Mac and linux. </li><br />
+            <li>Security- The .NET framework provides very good inbuilt security.It takes care of the varification and
+            validation of programs and applications. The applications can also implement their own explicit security 
+            mechanism.</li><br />
+            <li>Memory Management- The .NET framework is very good at it's memory management. The CLR check to see which 
+            resource are not being used. It then release those resources to free up the memory space. This is done by 
+            a componant called <b>garbage collector</b> and the mechansm is called <b>garbage collection</b>.</li><br />
+            <li>Type Safety- is another design principle. The .NET framework restricts users to do improper casts, ill-defined
+                datatypes and variables. It also introduced static and dynamic types data types which check the datatype at compiler 
+            and run time.</li>
+        </ul>
+    </div>
+   
+</body>
+</html>

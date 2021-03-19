@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Structure in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Structure in C#</h2>
+        </div>
+        <p>
+            In C#, structure is a value type data type. Like classes , structure can contain parameterized and static
+            constructors, methods, fields ,properties events , operators etc. Structure is used to hold small data type values
+            that do not require modification after structure is created.
+        </p>
+        <p>Structure is created with struct keyword. Let's understand how to declare and use structure.</p>
+
+        <h3>Structure declaration</h3>
+
+        <div class="programcode">
+            <p>
+                <code>
+                    struct struct_name <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//constructors</cmt><br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//properties</cmt><br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//Methods</cmt><br />
+                    }<br />
+                </code>
+            </p>
+        </div> <br />
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    struct Student <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;public string name;<br />
+                    &nbsp;&nbsp;&nbsp;publlic int age;<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <h3>Creating object of structure</h3>
+        <p>
+            An object of structure can be created with new keyword. <br />
+            <code>Student std=new Student();</code><br />
+            When the structure object is created with new keyword, the default parameterless constructor of the structure is called
+            and all the members are initialized to default value. <br /> <br />
+            You can also create object of structure without new keyword , <br />
+            <code>Student std;</code> <br />
+            but then you must initialize the members of the
+            structure manually. If you try to access value of member of strucure without initializing it , it will throw an error.
+            <br />
+        </p>
+        <h3>Access members of structure</h3>
+        <p>
+            Like classes you can access the members of structure using the dot(.) operator. <br />
+            <code> Console.WriteLine(std.age);</code>
+        </p>
+        <div class="well">
+            <h2>Constructors in structure</h2>
+        </div>
+        <p>a structure can contain parameterized constructor, but not parameterless constructor.</p>
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    struct Student<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp; public int age;<br />
+                    &nbsp;&nbsp;&nbsp; public Student(int a)<br />
+                    &nbsp;&nbsp;&nbsp; {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age=a;<br />
+                    &nbsp;&nbsp;&nbsp; }<br />
+                    }<br />
+                    Student std=new Student(12);<br />
+                    Console.WriteLine(std.age);<br />
+                </code>
+            </p>
+        </div> <br />
+        <div class="well">
+            <h2>Methods in structure</h2>
+        </div>
+        <p>
+            Structure can include methods like classes.
+        </p>
+        <br />
+        <div class="programcode">
+            <p>
+                <code>
+                    struct Student<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp; public int age;<br />
+                    &nbsp;&nbsp;&nbsp; public Student(int a)<br />
+                    &nbsp;&nbsp;&nbsp; {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age=a;<br />
+                    &nbsp;&nbsp;&nbsp; }<br />
+                    &nbsp;&nbsp;&nbsp; public void Show()
+                    &nbsp;&nbsp;&nbsp; {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(this.age);<br />
+                    &nbsp;&nbsp;&nbsp; }<br />
+                    }<br />
+                    Student std=new Student(12);<br />
+                    std.Show();<br />
+                    <br />
+                </code>
+            </p>
+        </div>
+
+        <div class="well">
+            <h2>Difference between class and structure</h2>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-primary">
+                    <th>Class</th>
+                    <th>Structure</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>class is defined using class keyword.</td>
+                    <td>structure is defined using struct keyword.</td>
+                </tr>
+                <tr>
+                    <td>class is reference type data type.</td>
+                    <td>structure is value type data type.</td>
+                </tr>
+                <tr>
+                    <td>class supports inheritance.</td>
+                    <td>structure does not support inheritance.</td>
+                </tr>
+                <tr>
+                    <td>class can have parameterless constructors.</td>
+                    <td>structure cannot have parameterless constructors.</td>
+                </tr>
+                <tr>
+                    <td>An object of class can be created with new keyword.</td>
+                    <td>An object of structure can be created with or without new keyword.</td>
+                </tr>
+                <tr>
+                    <td>class can inherit other classes.</td>
+                    <td>structure cannot inherit other classes or structure.</td>
+                </tr>
+                <tr>
+                    <td>class can be used as a base class for other classes.</td>
+                    <td>structure cannot be used as base structure for other strucures.</td>
+                </tr>
+                <tr>
+                    <td>We can declare classes as abstruct, sealed, virtual and protected.</td>
+                    <td>We cannot declare structures as abstruct, sealed, virtual and protected.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

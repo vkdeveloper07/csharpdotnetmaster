@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Data Types in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Data Types in C#</h2>
+        </div>
+        <p>
+            C# is strongly typed language. We must declare the variable with appropriate data type. The data type of the
+            variable defines what range of values the variable is going to store.
+        </p>
+        <h3>Example</h3>
+
+        <div class="programcode">
+            <p>
+                <code>
+                    int i=20;<br />
+                    float amount=34.4f;<br />
+                    string message="Hello";<br />
+                    char character='z';<br />
+                    bool b=false;<br />
+                </code>
+            </p>
+        </div><br /><br />
+        <div class="well">
+            <h2>Types of Data types</h2>
+        </div>
+        <p>There are mainly two types of data type. Value type and Reference type.</p>
+        <ul>
+            <li>
+                Value Type - The value type data type directly stores the value into it's memory.In C#, we have following
+                value type data types.<br /><br />
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="bg-primary">
+                            <th>Data type</th>
+                            <th>Range</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>Integer type</b></td>
+                        </tr>
+                        <tr>
+                            <td>byte</td>
+                            <td>8 bit unsigned integer</td>
+                            <td>0-255</td>
+                        </tr>
+                        <tr>
+                            <td>sbyte</td>
+                            <td>8 bit signed integer</td>
+                            <td>-128 to 127</td>
+                        </tr>
+                        <tr>
+                            <td>ushort</td>
+                            <td>16 bit unsigned integer</td>
+                            <td>0 to 65535</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>16 bit signed integer</td>
+                            <td>-32768 to 32767</td>
+                        </tr>
+                        <tr>
+                            <td>uint</td>
+                            <td>32 bit unsigned integer</td>
+                            <td>0 to 4,294,967,295</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>32 bit signed integer</td>
+                            <td>-2,147,483,648 to 2,147,483,648</td>
+                        </tr>
+                        <tr>
+                            <td>ulong</td>
+                            <td>64 bit unsigned integer</td>
+                            <td>0 to 18,446,744,073,709,551,615</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>64 bit signed integer</td>
+                            <td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>Boolean type</b></td>
+                        </tr>
+                        <tr>
+                            <td>bool</td>
+                            <td>8 bit true or false value</td>
+                            <td>true or false</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>Floating type</b></td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>32 bit floating point</td>
+                            <td>-3.402823e38 to 3.402823e38</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>64 bit floating point</td>
+                            <td>-1.79769313486232e308 to 1.79769313486232e308</td>
+                        </tr>
+                        <tr>
+                            <td>decimal</td>
+                            <td>128 bit decimal point</td>
+                            <td>
+                                (+ or -)1.0 x 10e-28
+                                to
+                                7.9 x 10e28
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>Character type</b></td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>16-bit single Unicode character</td>
+                            <td>
+                                Any character like A,a, or unicode like \u0057
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>string type</b></td>
+                        </tr>
+                        <tr>
+                            <td>string</td>
+                            <td>sequence of characters</td>
+                            <td>
+                                Any valid string enclosed in double quotes like "Hello","Welcome" etc
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>DateTime type</b></td>
+                        </tr>
+                        <tr>
+                            <td>DateTime</td>
+                            <td>to represent Date and Time</td>
+                            <td>
+                                0:00:00am 1/1/01
+                                to
+                                11:59:59pm 12/31/9999
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="bg-info" style="text-align:center"><b>Object type</b></td>
+                        </tr>
+                        <tr>
+                            <td>object</td>
+                            <td>Base data type of all types</td>
+                            <td>
+                                any value can be assigned to object type
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                Each Datatype can store specific range of values assigned by compiler as given in above table.
+                If we try to assign value to data type larger then the maximum value, the compiler will throw an error.
+            </li>
+            <br />
+            <li>
+                Reference Types - The reference data types does not store the values directly. Instead it stores the
+                reference to the actual value.
+                <ol>
+                    <li>Classes - </li>A class is like a blueprint. You can learn more about classes
+                    <a href="Classes.html">here.</a>
+                    <li>Interface - </li>An interface is like a contract between two or more classes.Learn
+                    <a href="">here.</a>
+                    <li>Arrays - </li>An array is a collection of elements of similar data types. Learn
+                    <a href="">here.</a>
+                    <li>Delegates - </li>Learn about delegates
+                    <a href="">here.</a>
+                </ol>
+            </li>
+
+
+        </ul>
+        <div class="well">
+            <h2>Data Type conversion</h2>
+        </div>
+        <p>
+            We can convert values of one data type to another using type conversion. There are two types of type conversion
+            in c#. Implicit and Explicit
+        </p>
+
+        <ul>
+            <li>
+                Implicit - Implicit type conversion is done by compiler automatically. Implicit type conversion happens when
+
+                <ol>
+                    <li>The two data types are compatible.</li>
+                    <li>When small data type value is assigned to large data type.</li>
+                </ol>
+                <table class="table table-bordered">
+                    <caption>Implicit data type conversion table</caption>
+                    <thead class="bg-primary">
+                        <tr>
+                            <th>From</th>
+                            <th>To</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>byte</td>
+                            <td>short,int,long,float,double</td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>int,long,float,double</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>long,float,double</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>float,double</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>double</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>int,long,float,double</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                Explicit type- Some data types are not converted implicitly by compiler. When you try to convert large datatype
+                to small data type , then you have to use explicit type conversion. For ex-<br /><br />
+                <div class="programcode">
+                    <p>
+                        <code>
+                            public static void Main()<br />
+                            {<br />
+                            &nbsp;&nbsp;&nbsp; long l= 234;<br />
+                            &nbsp;&nbsp;&nbsp; int i=(int)l;<br />
+                            }<br />
+
+                        </code>
+                    </p>
+                </div>
+                Sometimes casting from long large data types to small datatypes can cause loss of precision.
+
+            </li>
+        </ul>
+    </div>
+  
+</body>
+</html>

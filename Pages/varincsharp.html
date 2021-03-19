@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>var in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>var in C#</h2>
+        </div>
+        <p>
+            var is introduced in C# 3.0. We can declare method level variables using var. The var is very useful for developers.
+            It allows developers to declare the variables without specifying their type. The data type of variable will be decided based
+            on value assigned to it.
+        </p>
+
+        <div class="well">
+            <h2>Declaration and Initialization</h2>
+        </div>
+        <p>
+            <code>
+                var age=20;<br />
+                var msg="Hello";<br />
+                var amount=20.3;<br />
+            </code><br />
+            In case of var , the compiler will decide the type of variable based on the value assigned to it. See the following
+            program.
+            <br /><br />
+        </p>
+        <div class="programimagediv" style="display:inline-block">
+            <img src="../Images/Programs/vardemo.jpg" alt="Var Demo" class="img-rounded" width="400" height="300" />
+        </div>
+        <div class="programimagediv" style="display:inline-block">
+            <img src="../Images/outputs/vardemooutput.jpg" alt="Var Demo output" width="400" height="300" />
+        </div>
+
+        <br /><br />
+
+
+        <p>
+            variables with var datatype must be initialized at the time of declaration. Otherwise compiler will throw an
+            error.
+        </p>
+
+        <div class="programcode">
+            <p>
+                <code>
+                    var i;<cmt>//error- implicit typed variables must be initialized</cmt><br />
+                    i=20;
+                </code>
+            </p>
+        </div><br /><br />
+        <p>Multiple declaration of variables with var datatype are not allowed in single statement.</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    var i=20,j=10; <cmt>//will throw error</cmt><br />
+                </code>
+            </p>
+        </div><br />
+        <p>var cannot be used as function parameter</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    public void Show(var i) <cmt>error</cmt><br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>code</cmt><br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <div class="well">
+            <h2>where can we use var</h2>
+        </div>
+
+        <ul>
+            <li>var can be used to declare implicitly typed local variables.</li>
+            <li>var can be used to declare anonymous types.</li>
+            <li>var can be used with LINQ queries.</li>
+            <li>var can be used in for and foreach loops.</li>
+        </ul>
+
+    </div><br />
+   
+</body>
+</html>

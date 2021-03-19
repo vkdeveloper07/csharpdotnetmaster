@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Arrays in C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is an Array</h2>
+        </div>
+        <p>
+            An array is the data structure in c# which stores multiple elements of the same datatype. These elements are
+            stored contiguously in the memory.
+            For ex- if we want to store single value in variable, we would do so by declarring a variable and assigning value to it.
+            <code>int i=2;</code>
+            But suppose you want to store multiple values in a variable at a time, so we can do so by declaring an array.
+            There are 3 types of array Single dimentional , multi dimentional and jagged array. Let's
+            understand how to declare an array.
+        </p>
+        <div class="well">
+            <h2>Array declaration and Initialization</h2>
+        </div>
+        <p>
+            Declaring an integer array, <br />
+            <code>
+                int [] array;
+            </code><br />
+            Declaring an double array, <br />
+            <code>
+                double [] array;
+            </code><br />
+            Declaring an string array,<br />
+            <code>
+                string [] array;
+            </code><br /><br /><br />
+
+            Declare the integer array of size 5 i.e 5 elements can be stored in the array,<br />
+            <code> int[] arr=new int[5];<br /></code><br />
+
+            Declare the string array of size 5<br />
+            <code>  string[] arr=new string[5];</code><br /><br />
+
+            Initializing an integer array<br />
+            <code>int[] arr=new int[5]{1,2,3,4,5};</code> <br /> <br />
+
+            Initializing an string array<br />
+            <code>string[] arr=new string[2]{"Hello","world"};</code><br />
+            <br /><br />
+
+            You can also declare array without specifying size if you are initializing it at the time of declaration.
+            The compiler will determine the size based on the number of elements in the array.
+            <br />
+            <br />
+            <code>int[] arr={1,2,3,4,5};</code>
+        </p>
+        <h2>Invalid array declaration </h2>
+
+        <p>
+            Declaring array without specifying size will throw an error. <br />
+            <code>int[] arr=new int[];</code> <br /><br />
+
+            When initializing array , the number of elements must be equal to the size specified in array.<br />
+            <code>int[] arr=new int[5] {12,,43,76}</code>
+        </p>
+        <div class="well">
+            <h2>Accessing array elements</h2>
+        </div>
+        <p>Array elements can be accessed using <br /> 1. Index and <br />2. loop</p>
+        <h3>Accessing array elements using Index</h3>
+        <p>An index is a number that is associated with each element of array. Array index starts from 0.</p>
+        <br />
+        <p>For ex</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    int[] arr=new int[5] {4,1,5,8,9};
+                    Console.WriteLine(arr[1]); <cmt>output- 1</cmt> <br />
+                    Console.WriteLine(arr[3]); <cmt>output- 8</cmt>
+                </code>
+            </p>
+        </div>
+        <p>
+            if you try to access the array element specifying index greater than size , compiler will throw an IndexOutOfRange
+            exception. <br /> For ex
+        </p> <br />
+        <div class="programcode">
+            <p>
+                <code>
+                    int[] arr=new int[5] {4,1,5,8,9};
+                    Console.WriteLine(arr[5]); <cmt>output- error - IndexOutOfRange</cmt> <br />
+                </code>
+            </p>
+        </div>
+        <h3>Accessing array elements using loop</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    int[] arr=new int[5] {4,1,5,8,9}; <br />
+                    for(int i=0;i < arr.Length; i++) <br />
+                    { <br />
+                    &nbsp;&nbsp;&nbsp;   Console.WriteLine(arr[i]); <cmt>output- 4,1,5,8,9</cmt> <br />
+                    } <br />
+                </code>
+            </p>
+
+        </div><br />
+        <div class="well"> <h2>Two dimentional Array</h2></div>
+        <p>
+            Until now we have seen single dimentional array. Here we will see how to declare and initialize two dimentional array.
+        </p>
+        <h3>Declaring and initializing multidimentional array.</h3>
+        <p><code>int[,] arr =new int[2,3];</code></p> <cmt>Two dimentional array with 2 rows and 3 columns</cmt> <br />
+        <p>
+            <code>
+                int[,] arr=new int[2,3] <br />
+                {<br />
+                &nbsp;&nbsp; {2,5,7}, <br />
+                &nbsp;&nbsp; {4,8,9} <br />
+                };<br />
+            </code>
+        </p>
+        <h3>Accessing elements of 2 dimentional array</h3>
+
+        <p>
+            <code>
+                int[,] arr=new int[2,2] <br />
+                {<br />
+                &nbsp;&nbsp; {2,5}, <br />
+                &nbsp;&nbsp; {4,8} <br />
+                };<br />
+            </code>
+
+            Console.WriteLine(arr[0,0]); <cmt>output- 2</cmt><br />
+            Console.WriteLine(arr[0,1]); <cmt>output- 5</cmt><br />
+            Console.WriteLine(arr[1,0]); <cmt>output- 4</cmt><br />
+            Console.WriteLine(arr[1,1]); <cmt>output- 8</cmt><br />
+        </p>
+        <p>
+            Access elements using for loop
+        </p>
+        <div class="programcode">
+            <p>
+                <code>
+                    int[,] arr=new int[2,2] <br />
+                    {<br />
+                    &nbsp;&nbsp; {2,5}, <br />
+                    &nbsp;&nbsp; {4,8} <br />
+                    };<br />
+                    for(int i=0;i < 2; i++) <br />
+                    {<br />
+                    &nbsp;&nbsp;for(int j=0; j < 2 ; j++) <br />
+                    &nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(i,j); <br />
+                    &nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div> <br />
+        <p>Similar to 2 dimentional array , you can declare 3 dimentional , 4 dimentional arrays. C# allows multidimentional 
+        arrays upto 32 dimentions.</p>
+    </div>
+</body>
+</html>

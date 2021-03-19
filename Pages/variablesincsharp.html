@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Variables in C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Variables in C#</h2>
+        </div>
+        <p>
+            A variable is a name in which we can store the data. A variable is declared prefixing data type of variable.<br />
+        </p>
+        <h3>Syntax</h3>
+        <div class="programcode">
+            <p>  <  datatype > < variable name > =value;</p>
+        </div>
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    int age=20; <br />
+                    float amount=23.2; <br />
+                </code>
+            </p>
+        </div><br /><br />
+        <div class="well">
+            <h2>Naming conventions</h2>
+        </div>
+        <ul>
+            <li>Variable names must be unique throught the program.</li>
+            <li>Variable name should contain letters,digits and underscores only.</li>
+            <li>Variable names are case sensetive.</li>
+            <li>Reserved keywords cannot be used as variable names.</li>
+            <li>Variable name should start with letter.</li>
+        </ul>
+        <div class="well">
+            <h2>Declaration and initialization</h2>
+        </div>
+        <p>
+            We can declare and initialize variable on the same line. <br />
+            <code>int i=20;</code><br />
+            OR <br />
+            we can declare variable first and initialize later.
+            int i;<br />
+            <code> i=20;</code> <br /><br />
+
+            We can declare multiple variables of same data type on single line. <br />
+            <code>int i , j, k;</code><br />
+
+            AND <br />
+
+            We can initalize multiple variables of same data type on single line. <br />
+            <code>int i=10 , j=20, k=100;</code>
+            <br />
+            <br />
+            We can assign value of one variable to another. <br />
+
+            <code>
+                int i = 30;  <br />
+                int j=i;     //Now j contains value of i i.e 30
+
+            </code><br /><br />
+            We can assign another value to variables after it has been initialized.<br />
+            <code>
+                int i=20;<br />
+                i=30;<br />
+                Console.WriteLine(i);    //value if i is 30.
+            </code>
+            <br /><br />
+            A variable must be assigned value before using it. Otherwise compiler will throw an error.<br />
+            <code>
+                int i;<br />
+                Console.WriteLine(i); //error- Use of unassigned local variable i;
+            </code>
+
+
+        </p>
+
+
+
+    </div>
+   
+
+</body>
+</html>

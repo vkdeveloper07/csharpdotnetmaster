@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Switch statement in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+    <style>
+        .output {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>Switch statement in C#</h2>
+        </div>
+        <p>
+            The switch statement is like if..else where you can specify multiple conditions and based on expression provided,
+            particular block of code is executed.
+        </p>
+
+        <p>Syntax</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    switch(expression/condition)<br />
+                    {<br />
+                    &nbsp;&nbsp;case value1:<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>Code to execute</cmt><br />
+                    &nbsp;&nbsp;&nbsp;break;<br />
+                    &nbsp;&nbsp;case value2:<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>Code to execute</cmt><br />
+                    &nbsp;&nbsp;&nbsp;break;<br />
+                    &nbsp;&nbsp;default:<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>default Code to execute if other cases values does not match the expression.</cmt><br />
+                    &nbsp;&nbsp;&nbsp;break;<br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <p>
+            Explanation- The value or expression provided to switch will be checked against every case. When the value matches with
+            the case value , the respective block of code is executed and the flow of execution is terminated and program jumps out of switch.
+            This is done by break keyword. If you don't specify the break keyword, the execution will continue to next case statement.
+        </p>
+        <br />
+        <p style="text-align:center;">Example</p><br />
+        <div class="programimagediv">
+            <img src="../Images/Programs/switchdemo.JPG" alt="Switch demo" height="400" />
+        </div><br />
+        <div class="output">
+            <p>Output - The value is 10.</p>
+        </div>
+
+        <br />
+        <p>
+            Note:  Before c# 6.0, the expression in switch statement must of type char,bool,string,int,long, or enum. But starting witg
+            C# 7, the switch expression could be any non null expression.
+        </p>
+        <br />
+        <p>
+            The switch values must be unique values. How ever with C# 7 , case can have non unique values as well. In that
+            case , the first matching case will be executed.
+        </p>
+        <br />
+        <div class="well">
+            <h2>Using break to exit the case</h2>
+        </div>
+        <p>
+            After every case statement, you must specify the break keyword to terminate the flow of execution and jump out of
+            switch statement. If you don't specify the break keyword, the flow of execution will continue and the further case statements
+            will be executed.
+        </p><br />
+
+        <div class="well">
+            <h2>Nested switch statement</h2>
+        </div>
+        <p>We can also have nested switch case statement. See the example below.</p><br />
+        <p style="text-align:center;">Example</p><br />
+        <div class="programimagediv">
+            <img src="../Images/Programs/nested switch.JPG" alt="Nested switch" height="450" width="500" />
+        </div>
+        <br />
+        <div class="output">
+            <p>Output - The value is 10.<br />the subtraction is 2</p>
+        </div>
+        <br />
+        <p>
+            Explanation- The switch statement starts with the case 1 , when values doesn't match , it moves to next case , case 10
+            The expression is matched and the statement <q>the value is 10</q> is printed on the console. Also the program moves
+            to next switch statement and checks the condition specified i.e <q>10-2</q> which matches with the case- 2 and the
+            <q>the subtraction is 2 </q>is printed on the console.
+        </p>
+    </div>
+ 
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿body {
+  
+    padding:10px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.container {
+    text-align: left;
+    border: 1px solid black;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.well {
+    text-align: center;
+}
+
+p {
+    font-family: Calibri;
+    font-size: 20px;
+}
+
+.footer {
+    height: 200px;
+    background-color: gray;
+}
+
+.programimagediv {
+    text-align: center;
+}
+
+.programcode {
+    border: 1px solid black;
+    width: 550px;
+    padding: 10px;
+}
+
+cmt {
+    font-size: 14px;
+    color: green;
+}
+
+ul li {
+    font-family: Calibri;
+    font-size: 20px;
+}
+ol li {
+    font-family: Calibri;
+    font-size: 20px;
+}
+tr {
+    font-family: Calibri;
+    font-size: 20px;
+}
+.output {
+    width: 400px;
+    background-color: black;
+    color: white;
+    text-align:center;
+  
+}
+span {
+    float: left;
+    font-size: large;
+}
+h3 {
+    text-align: left;
+}
+

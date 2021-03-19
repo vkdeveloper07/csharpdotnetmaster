@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Interface in C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is an interface in c#</h2>
+        </div>
+        <p>
+            An interface is like a defined contract between the two or more classes. Interface contains methods, properties
+            and events. All the methods declared in the interface are abstract methods i.e they cannot have implementation
+            but only declaration. Interface are used to achieve multiple inheritance. <br />
+
+            An interface is defined using <i>interface</i> keyword. <br />The classes or structures must impliment the interface and define all the methods of the interface.
+        </p>
+        <br />
+        <h3>Syntax</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    interface interface_name <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//Methods declaration</cmt><br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//properties declaration</cmt><br />
+                    &nbsp;&nbsp;&nbsp;<cmt>//events declaration</cmt><br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <br />
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    interface IStudent <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;void ShowName();<br />
+                    &nbsp;&nbsp;&nbsp;void ShowAge();<br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <p>
+            All the members of the interface are public by default. you cannot use any other access modifier on members
+            of the interface. If you specify any other access modifier, the compiler will throw an error.
+        </p>
+        <div class="well">
+            <h2>Implementing interface</h2>
+        </div>
+        <p>The classes and structures can implement the interface  <q>:</q></p>
+
+        <h3>
+            Example
+        </h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    interface IStudent <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;void ShowName();<br />
+                    &nbsp;&nbsp;&nbsp;void ShowAge();<br />
+                    }<br />
+
+                    <br />
+                    class StudentDemo:IStudent<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;public void ShowName()<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Student name is ABC");<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;public void ShowAge()<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Student age is 12");<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <p>
+            The methods of the interfaces must be implemented with public access modifier.
+        </p> <br />
+        <p>In above program , we have implemented interface implicitly. We can also implement interface explicitly.</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    class StudentDemo:IStudent<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;void IStudent.ShowName()<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Student name is ABC");<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;void IStudent.ShowAge()<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine("Student age is 12");<br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <p>
+            In explicit interface implementation ,call the member name with interface name and dot(.). An interface should
+            be implemented explicitly when class is implementing multiple interfaces.
+        </p>
+    </div> <br />
+</body>
+</html>

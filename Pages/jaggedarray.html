@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jagged Array</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What is jagged array</h2>
+        </div>
+        <p>
+            Jagged array is an array of array. It means every element of jagged array is a seperate array. The elements of jagged
+            arrays can be of different dimentions.<br />
+        </p>
+
+        <h3>Syntax</h3>
+        <p>
+            int[][] arr=new int[2][]; <cmt>jagged array of 2 single dimentional arrays</cmt> <br />
+            int[][,] arr=new int[4][,]; <cmt>jagged array of 4 two dimentional arrays</cmt>
+        </p>
+        <h3>Initialization</h3>
+        <p>
+            Before we can use the array, it must be initialized <br />
+            arr[0]=new int[5]{1,2,3,4,5}; <br />
+            arr[1]=new int[3]{5,8,3}; <br />
+            <br />
+            We can also omit the size of array <br />
+
+            arr[0]=new int []{3,5,6,1}; <br />
+            arr[1]=new int []{1,9,6}; <br />
+        </p>
+        <p>
+            You can also directly initialize the array while declaring <br /> <br />
+            <code>
+                int[][] jaggedarr=new int[2][] <br />
+                {<br />
+                &nbsp;&nbsp;&nbsp;new int[]{1,2,3,4},<br />
+                &nbsp;&nbsp;&nbsp;new int[]{4,1}<br />
+                };
+            </code><br />
+        </p>
+        <p>
+            You can use the short form method to initialize the jagged array <br /> <br />
+            <code>
+                int[][] jaggedarr=<br />
+                {<br />
+                &nbsp;&nbsp;&nbsp;new int[]{1,2,3,4,5},<br />
+                &nbsp;&nbsp;&nbsp;new int[]{4,1,4,5}<br />
+                }<br />
+            </code>
+        </p>
+        <p>The jagged array is an array of arrays. so the elements of jagged arrays are reference types and initialized to
+        null by default.</p>
+        
+        <div class="well">
+            <h2>Access elements of jagged array</h2>
+        </div>
+        <p>To access the element of the jagged array , specify the row and the index of element of array.</p>
+        <p>
+            <code>
+                int[][] arr=<br />
+                {<br />
+                &nbsp;&nbsp;&nbsp;new int[]{1,2,3,4},<br />
+                &nbsp;&nbsp;&nbsp;new int[]{4,5}<br />
+                }<br />
+            </code>
+            <br />
+            Access second([1]) element of first array([0]) <br />
+            Console.WriteLine(arr[0][1])  <cmt>Output - 2</cmt> <br />
+
+            Access second ([1]) element of second array([1]) <br />
+            Console.WriteLine(arr[1][1])  <cmt>Output - 5</cmt> <br />
+        </p>
+        <div class="well">
+            <h2>Jagged array with multidimentional arrays</h2>
+        </div>
+        <p>You can also declare the jagged array with multidimentional arrays. Below is the example</p>
+        <p>
+            <code>
+                int[][,] arr=new int[2][,] <br />
+                {<br />
+                &nbsp;&nbsp;&nbsp;new int[]{  {2,8},{2,4}  },<br />
+                &nbsp;&nbsp;&nbsp;new int[]{  {3,6},{4,3}  },<br />
+                }<br />
+            </code>
+            Above example declared the two dimentional jagged array with 2 rows and 2 columns. <br />
+        </p>
+        <p>Now you can access the elements of 2D array as follows <br />
+        
+        Console.WriteLine(arr[0][1,0]) <cmt>Output - 2</cmt><br />
+        Console.WriteLine(arr[1][0,1]) <cmt>Output - 6</cmt>
+        
+        </p>
+        <p>Similar to 2D array , you can mix up jagged array with 3d, 4d upto 32 dimentional arrays.</p>
+    </div>
+</body>
+</html>

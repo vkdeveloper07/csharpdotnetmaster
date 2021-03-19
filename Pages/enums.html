@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Enums in c#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Content/Site.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What are Enums</h2>
+        </div>
+        <p>
+            In c#, enum is used to assign the constant name to the integer values. Enum is a group of named integer constants.
+            Enums are used to give values a constant name and make it more readable.
+        </p>
+        <p>Enum is a value type data type.It can be directly defined inside a namespace , class or structure.</p>
+        <h3>Syntax</h3>
+        <p>
+            <code>
+                enum enum_name <br />
+                {<br />
+                &nbsp;&nbsp;&nbsp;   constant_names<br />
+                }<br />
+            </code>
+        </p>
+        <h3>Example</h3>
+        <div class="programcode">
+            <p>
+                <code>
+                    enum Fruits<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;Apple,<br />
+                    &nbsp;&nbsp;&nbsp;Kiwi,<br />
+                    &nbsp;&nbsp;&nbsp;Banana,<br />
+                    &nbsp;&nbsp;&nbsp;Pineapple<br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <p>
+            Each constant in enum stands for an integer value starting with 0. The values increases by 1 subsequently for
+            the next constants. For ex , In enum Fruits, the Apple will have value 0, the Kiwi will have value 1 and so on.
+        </p>
+        <p>
+            If you want to assign some other values to enum constants, you can assign that externally. For ex , you can
+            say Apple =1 , Kiwi=2 etc. If you assign different value to first element of enum, the value will increase by 1
+            for other elements. For ex - If you assign Apple = 2, the Kiwi will have value of 3, the Banana will be 4 and
+            Pineapple will have value of 5 and so on
+        </p>
+        <div class="well">
+            <h2>Access enum value</h2>
+        </div>
+        <p>To access the enum, use enum_name.constant_name.</p>
+        <p>
+            Console.WriteLine(Fruits.Apple)  <cmt>output -Apple</cmt><br />
+            Console.WriteLine(Fruits.Kiwi)  <cmt>output -Kiwi</cmt><br />
+        </p> <br />
+
+        <p>To access the integer value of enum , use enum_name.constant_name and simply type cast it to integer.</p>
+        <p>
+            Console.WriteLine((int)Fruits.Apple)  <cmt>output -0</cmt> <br />
+            Console.WriteLine((int)Fruits.Banana)<cmt>output -2</cmt>
+        </p>
+        <br />
+        <p>You can declare enum of any numeric type. i,e  byte , int, short etc. You cannot declare enum of string type.</p>
+    </div>
+</body>
+</html>

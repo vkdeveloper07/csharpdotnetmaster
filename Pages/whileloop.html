@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>While loop in C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="well">
+            <h2>What are loops in C#.</h2>
+        </div>
+        <p>
+            A meaning of loop is repeating something again and again. Similarly in C# , loops are used to execute a
+            statement continuously until certain condition is met. Also loops are used to iterate over
+            Array or collection. Instead of accessing each value of array or collection manually index by index we can loop over it
+            and access each element. we will learn about Arrays and collections in next modules.
+        </p>
+        <div class="well">
+            <h2>While Loop</h2>
+        </div>
+        <p>A while loop accepts a condition and executes a block of code until that condition becomes false.</p>
+        <br />
+        <p>Syntax</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    while(condition)<br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;<cmt>Code to execute</cmt><br />
+                    }<br />
+                </code>
+            </p>
+        </div>
+        <p>
+            Like if..else the while loop must contain a boolean expression that either evaluates to true or false. It has three
+            steps. Initialization, condition and increment. Let understand it with below example.
+        </p>
+        <br />
+        <div class="programcode">
+            <p>
+                <code>
+                    int k=1; <cmt>//Initialize variable k.</cmt><br />
+                    while(k <= 5) <cmt>//check against condition</cmt><br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(k);<br />
+                    &nbsp;&nbsp;&nbsp;k++;<cmt>//increment the value</cmt><br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <div class="output">
+            <p>Output - <br /> 1 <br /> 2 <br />3 <br />4 <br />5.</p>
+        </div>
+        <br />
+        <p>Make sure the condition specified in while loop becomes false at some point , otherwise loop will execute infinitly.</p>
+        <div class="well"><h2>Nested while loop</h2></div>
+        <p>We can write while loop inside another while loop. This is called as nested while loops.</p>
+        <p>For example</p>
+        <div class="programcode">
+            <p>
+                <code>
+                    int k=1; <br />
+                    int j=5;<br />
+                    while(k <= 5) <br />
+                    {<br />
+                    &nbsp;&nbsp;&nbsp;Console.WriteLine(k);<br />
+                    &nbsp;&nbsp;&nbsp;while(j>=1)<br />
+                    &nbsp;&nbsp;&nbsp;{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console.WriteLine(j);<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j--; <br />
+                    &nbsp;&nbsp;&nbsp;}<br />
+                    &nbsp;&nbsp;&nbsp;k++;<br />
+                    }<br />
+                </code>
+            </p>
+        </div><br />
+        <div class="output">
+            <p>Output - <br /> 1 <br /> 5 <br />4 <br />3 <br />2 <br />1 <br />2 <br /> 3 <br />4</p>
+        </div>
+    </div>
+</body>
+</html>
